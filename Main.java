@@ -21,9 +21,74 @@ public class Main implements Directions{
     // Want a second robot?  No prob.  They are cheap :)
     //Robot dude = new Robot(7,5,West,9);
     // examples of commands you can invoke on a Robot
-    writeInitials(rob);
+    //writeInitials(rob);
+    writeDiamond(rob);
      
     
+  }
+
+  private static void writeDiamond(Robot rob){
+    		
+    // Want a second robot?  No prob.  They are cheap :)
+    //Robot dude = new Robot(7,5,West,9);
+    // examples of commands you can invoke on a Robot
+    //rob.move();// move one step in the direction it is facing
+
+
+    for(int i = 0; i<5; i++){
+        rob.putBeeper();
+        rob.turnLeft();
+        rob.move();
+        turnRight(rob);
+        rob.move();
+        rob.putBeeper();
+    }
+
+      rob.turnLeft();
+      rob.turnLeft();
+      rob.move();
+      turnRight(rob);
+      rob.move();
+      rob.putBeeper();
+
+      for(int i = 0; i<5; i++){
+          rob.putBeeper();
+          rob.turnLeft();
+          rob.move();
+          turnRight(rob);
+          rob.move();
+      }
+
+      rob.turnLeft();
+      rob.turnLeft();
+      rob.move();
+      rob.move();
+      rob.putBeeper();
+
+      for(int i = 0; i<5; i++){
+
+          rob.putBeeper();
+          turnRight(rob);
+          rob.move();
+          rob.turnLeft();
+     rob.move();
+
+      }
+      rob.turnLeft();
+      rob.move();
+      rob.move();
+      rob.putBeeper();
+
+      for(int i = 0; i<5; i++){
+
+          rob.putBeeper();
+          turnRight(rob);
+          rob.move();
+          rob.turnLeft();
+          rob.move();
+
+      }
+
   }
 
   private static void writeInitials(Robot rob){
@@ -146,6 +211,14 @@ public class Main implements Directions{
    rob.move();
 
 
+
+  }
+
+    public static void turnRight(Robot rob){
+
+   rob.turnLeft();
+   rob.turnLeft();
+   rob.turnLeft();
 
   }
 }
